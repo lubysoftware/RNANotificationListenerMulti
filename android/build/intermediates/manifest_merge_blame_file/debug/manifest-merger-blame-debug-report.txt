@@ -1,0 +1,72 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.lesimoes.androidnotificationlistener" >
+4
+5    <uses-sdk
+6        android:minSdkVersion="23"
+6-->C:\Users\T-GAMER\Documents\Github\multi-fit-app\node_modules\react-native-android-notification-listener\android\src\main\AndroidManifest.xml
+7        android:targetSdkVersion="33" />
+7-->C:\Users\T-GAMER\Documents\Github\multi-fit-app\node_modules\react-native-android-notification-listener\android\src\main\AndroidManifest.xml
+8
+9    <uses-permission android:name="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE" />
+9-->C:\Users\T-GAMER\Documents\Github\multi-fit-app\node_modules\react-native-android-notification-listener\android\src\main\AndroidManifest.xml:4:5-92
+9-->C:\Users\T-GAMER\Documents\Github\multi-fit-app\node_modules\react-native-android-notification-listener\android\src\main\AndroidManifest.xml:4:22-90
+10    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+10-->C:\Users\T-GAMER\Documents\Github\multi-fit-app\node_modules\react-native-android-notification-listener\android\src\main\AndroidManifest.xml:5:5-74
+10-->C:\Users\T-GAMER\Documents\Github\multi-fit-app\node_modules\react-native-android-notification-listener\android\src\main\AndroidManifest.xml:5:22-72
+11    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+11-->C:\Users\T-GAMER\Documents\Github\multi-fit-app\node_modules\react-native-android-notification-listener\android\src\main\AndroidManifest.xml:6:5-81
+11-->C:\Users\T-GAMER\Documents\Github\multi-fit-app\node_modules\react-native-android-notification-listener\android\src\main\AndroidManifest.xml:6:22-78
+12    <uses-permission android:name="android.permission.WAKE_LOCK" />
+12-->C:\Users\T-GAMER\Documents\Github\multi-fit-app\node_modules\react-native-android-notification-listener\android\src\main\AndroidManifest.xml:7:5-68
+12-->C:\Users\T-GAMER\Documents\Github\multi-fit-app\node_modules\react-native-android-notification-listener\android\src\main\AndroidManifest.xml:7:22-65
+13    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+13-->C:\Users\T-GAMER\Documents\Github\multi-fit-app\node_modules\react-native-android-notification-listener\android\src\main\AndroidManifest.xml:8:5-77
+13-->C:\Users\T-GAMER\Documents\Github\multi-fit-app\node_modules\react-native-android-notification-listener\android\src\main\AndroidManifest.xml:8:22-74
+14
+15    <application android:allowBackup="false" >
+15-->C:\Users\T-GAMER\Documents\Github\multi-fit-app\node_modules\react-native-android-notification-listener\android\src\main\AndroidManifest.xml:10:5-33:19
+15-->C:\Users\T-GAMER\Documents\Github\multi-fit-app\node_modules\react-native-android-notification-listener\android\src\main\AndroidManifest.xml:11:9-36
+16        <service
+16-->C:\Users\T-GAMER\Documents\Github\multi-fit-app\node_modules\react-native-android-notification-listener\android\src\main\AndroidManifest.xml:12:9-19:19
+17            android:name="com.lesimoes.androidnotificationlistener.RNAndroidNotificationListener"
+17-->C:\Users\T-GAMER\Documents\Github\multi-fit-app\node_modules\react-native-android-notification-listener\android\src\main\AndroidManifest.xml:13:13-58
+18            android:exported="true"
+18-->C:\Users\T-GAMER\Documents\Github\multi-fit-app\node_modules\react-native-android-notification-listener\android\src\main\AndroidManifest.xml:15:13-36
+19            android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE" >
+19-->C:\Users\T-GAMER\Documents\Github\multi-fit-app\node_modules\react-native-android-notification-listener\android\src\main\AndroidManifest.xml:14:13-87
+20            <intent-filter>
+20-->C:\Users\T-GAMER\Documents\Github\multi-fit-app\node_modules\react-native-android-notification-listener\android\src\main\AndroidManifest.xml:16:13-18:29
+21                <action android:name="android.service.notification.NotificationListenerService" />
+21-->C:\Users\T-GAMER\Documents\Github\multi-fit-app\node_modules\react-native-android-notification-listener\android\src\main\AndroidManifest.xml:17:17-99
+21-->C:\Users\T-GAMER\Documents\Github\multi-fit-app\node_modules\react-native-android-notification-listener\android\src\main\AndroidManifest.xml:17:25-96
+22            </intent-filter>
+23        </service>
+24        <service android:name="com.lesimoes.androidnotificationlistener.RNAndroidNotificationListenerHeadlessJsTaskService" />
+24-->C:\Users\T-GAMER\Documents\Github\multi-fit-app\node_modules\react-native-android-notification-listener\android\src\main\AndroidManifest.xml:21:9-127
+24-->C:\Users\T-GAMER\Documents\Github\multi-fit-app\node_modules\react-native-android-notification-listener\android\src\main\AndroidManifest.xml:21:18-124
+25
+26        <receiver
+26-->C:\Users\T-GAMER\Documents\Github\multi-fit-app\node_modules\react-native-android-notification-listener\android\src\main\AndroidManifest.xml:23:9-32:20
+27            android:name="com.lesimoes.androidnotificationlistener.BootUpReceiver"
+27-->C:\Users\T-GAMER\Documents\Github\multi-fit-app\node_modules\react-native-android-notification-listener\android\src\main\AndroidManifest.xml:24:13-83
+28            android:enabled="true"
+28-->C:\Users\T-GAMER\Documents\Github\multi-fit-app\node_modules\react-native-android-notification-listener\android\src\main\AndroidManifest.xml:25:13-35
+29            android:exported="true"
+29-->C:\Users\T-GAMER\Documents\Github\multi-fit-app\node_modules\react-native-android-notification-listener\android\src\main\AndroidManifest.xml:26:13-36
+30            android:permission="android.permission.RECEIVE_BOOT_COMPLETED" >
+30-->C:\Users\T-GAMER\Documents\Github\multi-fit-app\node_modules\react-native-android-notification-listener\android\src\main\AndroidManifest.xml:27:13-75
+31            <intent-filter>
+31-->C:\Users\T-GAMER\Documents\Github\multi-fit-app\node_modules\react-native-android-notification-listener\android\src\main\AndroidManifest.xml:28:13-31:29
+32                <action android:name="android.intent.action.BOOT_COMPLETED" />
+32-->C:\Users\T-GAMER\Documents\Github\multi-fit-app\node_modules\react-native-android-notification-listener\android\src\main\AndroidManifest.xml:29:17-79
+32-->C:\Users\T-GAMER\Documents\Github\multi-fit-app\node_modules\react-native-android-notification-listener\android\src\main\AndroidManifest.xml:29:25-76
+33
+34                <category android:name="android.intent.category.DEFAULT" />
+34-->C:\Users\T-GAMER\Documents\Github\multi-fit-app\node_modules\react-native-android-notification-listener\android\src\main\AndroidManifest.xml:30:17-76
+34-->C:\Users\T-GAMER\Documents\Github\multi-fit-app\node_modules\react-native-android-notification-listener\android\src\main\AndroidManifest.xml:30:27-73
+35            </intent-filter>
+36        </receiver>
+37    </application>
+38
+39</manifest>
