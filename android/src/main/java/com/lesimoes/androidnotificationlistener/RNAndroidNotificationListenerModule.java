@@ -13,7 +13,7 @@ import java.util.Set;
 
 public class RNAndroidNotificationListenerModule extends ReactContextBaseJavaModule {
     private static ReactApplicationContext reactContext;
-    private static final String TAG = "RNAndroidNotificationListenerModule";
+    private static final String TAG = "RNAndroidNotificationListener";
 
     public RNAndroidNotificationListenerModule(ReactApplicationContext context) {
         super(context);
