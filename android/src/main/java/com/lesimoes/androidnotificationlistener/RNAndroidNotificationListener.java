@@ -41,6 +41,7 @@ public class RNAndroidNotificationListener extends NotificationListenerService {
                         @Override
                         public void run() {
                             try {
+                                serviceIntent.putExtra("stops",true);
                                 context.startForegroundService(serviceIntent);
                             } catch (Exception e) {
 
