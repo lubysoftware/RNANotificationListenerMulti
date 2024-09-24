@@ -7,7 +7,6 @@ import android.service.notification.NotificationListenerService;
 import android.service.notification.StatusBarNotification;
 import android.util.Log;
 import android.app.Notification;
-import android.app.ForegroundServiceDidNotStartInTimeException;
 
 import com.google.gson.Gson;
 
