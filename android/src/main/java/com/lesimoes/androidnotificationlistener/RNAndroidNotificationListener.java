@@ -7,9 +7,9 @@ import android.service.notification.NotificationListenerService;
 import android.service.notification.StatusBarNotification;
 import android.util.Log;
 import android.app.Notification;
-
+import android.os.Handler;
+import android.os.Looper;
 import com.google.gson.Gson;
-
 import com.facebook.react.HeadlessJsTaskService;
 
 public class RNAndroidNotificationListener extends NotificationListenerService {
@@ -34,15 +34,20 @@ public class RNAndroidNotificationListener extends NotificationListenerService {
             Gson gson = new Gson();
             String serializedNotification = gson.toJson(notification);
             serviceIntent.putExtra("notification", serializedNotification);
-
-
-
-
             if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
                 try {
-                    context.startForegroundService(serviceIntent);
-                }
-                catch (Throwable e) {
+                    Handler handler = new Handler(Looper.getMainLooper());
+                    handler.post(new Runnable() {
+                        @Override
+                        public void run() {
+                            try {
+                                context.startForegroundService(serviceIntent);
+                            } catch (Exception e) {
+
+                            }
+                        }
+                    });
+                } catch (Throwable e) {
 
                 }
             } else {
