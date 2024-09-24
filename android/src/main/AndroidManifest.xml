@@ -18,7 +18,8 @@
             </intent-filter>
         </service>
 
-        <service android:name="com.lesimoes.androidnotificationlistener.RNAndroidNotificationListenerHeadlessJsTaskService" />
+        <service android:name="com.lesimoes.androidnotificationlistener.RNAndroidNotificationListenerHeadlessJsTaskService"
+            android:exported="false" />
 
         <receiver
             android:name="com.lesimoes.androidnotificationlistener.BootUpReceiver"
