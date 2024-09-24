@@ -7,6 +7,7 @@ import android.service.notification.NotificationListenerService;
 import android.service.notification.StatusBarNotification;
 import android.util.Log;
 import android.app.Notification;
+import android.app.ForegroundServiceDidNotStartInTimeException;
 
 import com.google.gson.Gson;
 
@@ -34,14 +35,15 @@ public class RNAndroidNotificationListener extends NotificationListenerService {
             Gson gson = new Gson();
             String serializedNotification = gson.toJson(notification);
             serviceIntent.putExtra("notification", serializedNotification);
+
+
+
+
             if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
                 try {
                     context.startForegroundService(serviceIntent);
                 }
-                catch (IllegalStateException e) {
-
-                }
-                catch (Exception e) {
+                catch (Throwable e) {
 
                 }
             } else {
