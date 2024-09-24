@@ -33,13 +33,13 @@ public class RNAndroidNotificationListener extends NotificationListenerService {
 
             Gson gson = new Gson();
             String serializedNotification = gson.toJson(notification);
-
             serviceIntent.putExtra("notification", serializedNotification);
-
-            // Adicionando verificação de versão Android para garantir que o serviço seja iniciado corretamente
             if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
-                // Para Android O e superior, use startForegroundService
-                context.startForegroundService(serviceIntent);
+                try {
+                    context.startForegroundService(serviceIntent);
+                } catch (Exception e) {
+
+                }
             } else {
                 // Para versões anteriores, use startService
                 context.startService(serviceIntent);
