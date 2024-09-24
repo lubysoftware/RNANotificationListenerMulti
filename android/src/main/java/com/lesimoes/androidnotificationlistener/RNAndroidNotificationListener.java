@@ -36,9 +36,17 @@ public class RNAndroidNotificationListener extends NotificationListenerService {
 
             serviceIntent.putExtra("notification", serializedNotification);
 
-            HeadlessJsTaskService.acquireWakeLockNow(context);
+            // Adicionando verificação de versão Android para garantir que o serviço seja iniciado corretamente
+            if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
+                // Para Android O e superior, use startForegroundService
+                context.startForegroundService(serviceIntent);
+            } else {
+                // Para versões anteriores, use startService
+                context.startService(serviceIntent);
+            }
 
-            context.startService(serviceIntent);
+            // Acorda o serviço headless JS
+            HeadlessJsTaskService.acquireWakeLockNow(context);
         } catch (Throwable e) {
             Log.e(TAG, e.getMessage());
         }
