@@ -37,7 +37,11 @@ public class RNAndroidNotificationListener extends NotificationListenerService {
             if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
                 try {
                     context.startForegroundService(serviceIntent);
-                } catch (Exception e) {
+                }
+                catch (IllegalStateException e) {
+
+                }
+                catch (Exception e) {
 
                 }
             } else {
